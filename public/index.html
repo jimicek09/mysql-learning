@@ -7,14 +7,32 @@
         <link rel="stylesheet" href="index_stylesheet.css">
     </head>
     <body>
-        <div id="input">
-            <h1>Enter your name and email</h1>
-            <input type="text" id="nameInput" placeholder="Enter your name">
-            <input type="text" id="emailInput" placeholder="Enter your email">
-            <button onclick="addWord()">Add</button>
-        </div>
-        <div id="dataShower_div">
-            <ul id="dataShower"></ul>
+        <nav>
+            <ul>
+                <li class="nav-item" id="home">
+                    <a href="#">Home</a>
+                </li>
+                <li class="nav-item" id="about">
+                    <a href="#">About</a>
+                </li>
+                <li class="nav-item" id="services">
+                    <a href="#">Services</a>
+                </li>
+                <li class="nav-item" id="contact">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="login">
+            <div id="input">
+                <h1>Enter your name and email</h1>
+                <input type="text" id="nameInput" placeholder="Enter your name">
+                <input type="text" id="emailInput" placeholder="Enter your email">
+                <button onclick="addWord()">Add</button>
+            </div>
+            <div id="dataShower_div">
+                <ul id="dataShower"></ul>
+            </div>
         </div>
     </body>
 </html>

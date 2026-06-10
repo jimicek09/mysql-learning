@@ -1,5 +1,40 @@
 body {
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    background-color: #101418;
 }
-#input {
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+nav {
+    background-color: black;
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
+.nav-item {
+    float: left;
+}
+.nav-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav-item.active {
+    background-color: #202122;
+}
+#login {
+    background-color: #202122;
+    border-width: ;
+    display: flex;
 }
