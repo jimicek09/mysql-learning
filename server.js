@@ -16,4 +16,9 @@ app.post('/data', async(req, res) => {
     res.json({ success: true })
 });
 
+app.delete('/data', async(req, res) => {
+    await db.execute('DELETE FROM data');
+    res.json({ success: true })
+});
+
 app.listen(3000, () => console.log('Server running on http://localhost:3000'))

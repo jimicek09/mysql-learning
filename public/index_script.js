@@ -30,14 +30,28 @@ async function addWord() {
     const name = document.getElementById('nameInput').value
     const email = document.getElementById('emailInput').value
 
-    await fetch('/data', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name, email: email })
-    });
+    if(name === ""|| email === "") {
+        document.getElementById('hedding').innerText = "Please enter a valid input"
+        document.getElementById('hedding').style.color = "red"
+    } else {
+
+        document.getElementById('hedding').innerText = "Enter your name and email"
+        await fetch('/data', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: name, email: email })
+        });
+    }
 
     document.getElementById('nameInput').value = ''
     document.getElementById('emailInput').value = ''
+    loadWords();
+}
+async function wipeData() {
+    await fetch('/data', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' }
+    });
     loadWords();
 }
 
